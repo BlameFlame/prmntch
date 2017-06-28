@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Проминтех - Инжинеринговая компания</title>
+
+	<!-- Page icon -->
+	<link rel="icon" href="/static/images/Logo.png">
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- full page -->
+	<link href="/static/css/javascript.fullPage.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		/* Reset CSS
+		 * --------------------------------------- */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+		form,fieldset,input,textarea,p,blockquote,th,td {
+		    padding: 0;
+		    margin: 0;
+		}
+		a{
+			text-decoration:none;
+		}
+		table {
+		    border-spacing: 0;
+		}
+		fieldset,img {
+		    border: 0;
+		}
+		address,caption,cite,code,dfn,em,strong,th,var {
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		strong{
+			font-weight: bold;
+		}
+		ol,ul {
+		    list-style: none;
+		    margin:0;
+		    padding:0;
+		}
+		caption,th {
+		    text-align: left;
+
+		}
+		h1,h2,h3,h4,h5,h6 {
+		    font-weight: normal;
+		    font-size: 100%;
+		    margin:0;
+		    padding:0;
+		    color:#444;
+		}
+		q:before,q:after {
+		    content:'';
+		}
+		abbr,acronym { border: 0;
+		}
+
+
+		/* Custom CSS
+		 * --------------------------------------- */
+		body{
+			font-family: arial,helvetica;
+			color: #F2F2F2;
+		}
+		h1{
+			font-size: 6em;
+		}
+		p{
+			font-size: 2em;
+		}
+		.content{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			
+		}
+
+
+		.clip{
+			-webkit-text-fill-color: transparent;
+  			-webkit-background-clip: text;
+			background-clip: text;
+			background-size: contain;
+			background-image: url(static/images/1.jpg);
+		}
+
+		.logo{
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 50px;
+			height: 50px;
+			background-image: url(static/images/PogChamp.png);
+		}
+		.companyName{
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 80pt;
+			background: rgba(255,255,255, 0.6);
+		}
+		.companyEssence{
+			text-align: center;
+			font-size: 40pt;
+			color: #4d4d4d;
+			background: rgba(255,255,255, 0.6);
+		}
+		.widthTable{
+			position: relative;
+			padding: 0;
+			width: 100%;
+			top: 40%;
+		}
+
+		/* Section 1
+		 * --------------------------------------- */
+		#section0{
+			background-image: url(static/images/1.jpg);
+			/*background: linear-gradient(0deg, #F4F4F4 0%, white 50%, #F4F4F4 100%);
+			background-color: #fffafa;*/
+		}
+		#section0 h1{
+			color: #444;
+		}
+		#section0 p{
+			color: #333;
+			opacity: 0.4;
+		}
+
+
+		/* Section 2
+		 * --------------------------------------- */
+		#section1{
+			background: linear-gradient(0deg, #F4F4F4 0%, white 50%, #F4F4F4 100%);
+			background-color: #fffafa;
+		}
+		#section1 h1{
+			color: #444;
+		}
+		#section1 p{
+			opacity: 0.8;
+		}
+
+
+		/* Section 3
+		 * --------------------------------------- */
+		#section2{
+			background: linear-gradient(0deg, #F4F4F4 0%, white 50%, #F4F4F4 100%);
+			background-color: #fffafa;
+		}
+		#section2 h1{
+			color: #444;
+		}
+		#section2 p{
+			opacity: 0.6;
+		}
+
+		#logoIcon {
+			width: 18px; 
+			position: absolute; 
+			margin-top: 15px;
+			margin-left: -21px;
+		}
+	</style>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<img id="logoIcon" src="/static/images/Logo.png">
+                <a class="navbar-brand page-scroll" href="#about">ПРОМИНТЕХ</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" id="menu">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li>
+                        <a class="page-scroll" href="#about">О нас</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#certificats">Сертификаты</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#contacts">Контакты</a>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div id="fullpage">
+        <div class="section" data-anchor="about" id="section0">
+			<table class="widthTable">
+				<tr>
+					<th class="companyName">
+						<div >Проминтех</div>
+					</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="companyEssence">Инжинеринговая компания</td>
+				</tr>
+			</table>
+        </div>
+
+        <div class="section" data-anchor="certificats" id="section1">
+            <div class="slide" id="slide1">
+                <div class="content">
+                    <h1>No need for jQuery</h1>
+                    <p>
+                        5 Kb gzipped!!
+                    </p>
+                    <p>
+                        Improve the loading time of your site!
+                    </p>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="content">
+                    <h1>Slides too!</h1>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="content">
+                    <h1>More slides!</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section" data-anchor="contacts" id="section2">
+            <div class="content">
+				<table>
+					<tr>
+						<th>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" width="600" height="450" frameborder="0" style="border:0"></iframe>
+						</th>
+						<th>
+							<h1>Контакты</h1>
+							<p>
+								620017, Екатеринбург, ул. Белореченская,15 
+							</p>
+							<p>
+								Телефон: (343) 377-000-1
+							</p>
+							<p>
+								E-mail: sales@np-k.ru
+							</p>
+						</th>
+					</tr>
+				</table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="/static/js/jquery.easing.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/javascript.fullPage.js"></script>
+    <script type="text/javascript">
+        fullpage.initialize('#fullpage', {
+            anchors: ['about', 'certificats','contacts'],
+            menu: '#menu',
+            css3:true
+        });
+
+    </script>
+</body>
+
+</html>
