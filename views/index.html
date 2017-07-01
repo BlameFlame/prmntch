@@ -24,6 +24,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<style>
+		@font-face {
+			font-family: Century_Gothic;
+			src: url(static/fonts/Century-Gothic.ttf);
+		}
+		@font-face {
+			font-family: Avenir_Book;
+			src: url(static/fonts/Avenir-Book.ttf);
+		}
+
 		/* Reset CSS
 		 * --------------------------------------- */
 		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -87,59 +96,131 @@
 			top: 50%;
 			transform: translateY(-50%);
 			text-align: center;
-			
+		}
+		.mapPlace{
+			float: left;
+		}
+		.mapPlaceInfo{
+			float: none;
+			text-align: left;
 		}
 
-
-		.clip{
-			-webkit-text-fill-color: transparent;
-  			-webkit-background-clip: text;
-			background-clip: text;
-			background-size: contain;
-			background-image: url(static/images/1.jpg);
+		.certificates{
+			position: relative;
+			height: 100%;
+			text-align: center;
+		}
+		.certificatesImg{
+			position: absolute; 
+			left: 0; 
+			top: 50%; 
+			transform: translateY(-50%);
+			max-width: 50%;
+			max-height: 70%;
+			/*float: left; width: 50%;*/
+		}
+		.certificatesInfo{
+			color: #3a3a3a;
+			position: absolute; 
+			right: 0;
+			width: 50%; 
+			top: 50%; 
+			transform: translateY(-50%);
+			/*top: 50%;width: 50%; top: 50%;*/
 		}
 
-		.logo{
-			background-size: contain;
-			background-repeat: no-repeat;
-			width: 50px;
-			height: 50px;
-			background-image: url(static/images/PogChamp.png);
+		.company{
+			position: relative;
+		    display: table;
+    		text-align: center;
+    		margin: auto;
+			padding: 20px;
+			/*background-color: rgba(255,255,255, 0.6);	*/
+			line-height: 1;
+			color: #4d4d4d;
 		}
 		.companyName{
 			text-align: center;
-			color: #4d4d4d;
-			font-size: 80pt;
-			background: rgba(255,255,255, 0.6);
+			font-size: 6em;
+			/*background-color: rgba(255,255,255, 0.6);*/
+			font-family: Century_Gothic;
 		}
 		.companyEssence{
-			text-align: center;
-			font-size: 40pt;
-			color: #4d4d4d;
-			background: rgba(255,255,255, 0.6);
+			text-align: right;
+			font-size: 2em;
+			/*background-color: rgba(255,255,255, 0.6);*/
 		}
-		.widthTable{
+		
+		.companyText {
+			padding: 20px 10%;
 			position: relative;
-			padding: 0;
-			width: 100%;
-			top: 40%;
+			text-align: center;
+		}
+
+		.companySeparator {
+			position: relative;
+			width: 70%;
+			height: 2px;
+			background-color: rgba(0, 113, 188, 0.7);
+			margin: auto;
+		}
+
+		.menuBorder {
+			border-color: rgba(0, 113, 188, 0.7);
+			border-width: 0 0 2px;
+		}
+		
+		.containerAbout {
+			height: auto;
+			top: 50%;
+			transform: translateY(-50%);
+			position: relative;
+		}
+
+		.logo {
+			width: 75px;
+			top: -21%;
+			right: -12%;
+			position: absolute;
 		}
 
 		/* Section 1
 		 * --------------------------------------- */
-		#section0{
-			background-image: url(static/images/1.jpg);
-			/*background: linear-gradient(0deg, #F4F4F4 0%, white 50%, #F4F4F4 100%);
-			background-color: #fffafa;*/
+		#section0 {
+
 		}
 		#section0 h1{
 			color: #444;
 		}
 		#section0 p{
 			color: #333;
-			opacity: 0.4;
+			/*opacity: 0.4;*/
 		}
 
+		.circleService {
+			float: left;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background: rgba(0, 113, 188, 0.7);
+		}
+
+		.circleServiceInfo {
+			color: #4d4d4d;
+		}
+
+		.tableService {
+			width: 100%;
+			height: 70%;
+			top: 50%;
+			transform: translateY(-50%);
+			position: relative;
+		}
+
+		.tdCenter {
+			display:flex; 
+			align-items:center;
+		}
 
 		/* Section 2
 		 * --------------------------------------- */
@@ -167,100 +248,203 @@
 		#section2 p{
 			opacity: 0.6;
 		}
-
-		#logoIcon {
-			width: 18px; 
-			position: absolute; 
-			margin-top: 15px;
-			margin-left: -21px;
-		}
 	</style>
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-				<img id="logoIcon" src="/static/images/Logo.png">
-                <a class="navbar-brand page-scroll" href="#about">ПРОМИНТЕХ</a>
-            </div>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top menuBorder" role="navigation">
+        <div class="container">
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav" id="menu">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
-                        <a class="page-scroll" href="#about">О нас</a>
+                   <li>
+					    <a class="navbar-brand" href="#mainPage">
+							<img src="/static/images/Logo.png" width="20" height="20">
+						</a>
+                   </li>
+					<li data-menuanchor="mainPage">
+                        <a class="page-scroll" href="#mainPage">О нас</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#certificats">Сертификаты</a>
+					<li data-menuanchor="servicePage">
+                        <a class="page-scroll" href="#servicePage">Услуги</a>
                     </li>
-					<li>
-                        <a class="page-scroll" href="#contacts">Контакты</a>
+                    <li data-menuanchor="certificatesPage">
+                        <a class="page-scroll" href="#certificatesPage">Сертификаты</a>
                     </li>
-            </div>
+					<li data-menuanchor="contactsPage">
+                        <a class="page-scroll" href="#contactsPage">Контакты</a>
+                    </li>
+                </ul>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 
     <div id="fullpage">
-        <div class="section" data-anchor="about" id="section0">
-			<table class="widthTable">
+        <div class="section" data-anchor="mainPage" id="section0">
+			<div class="containerAbout">
+				<div class="company">
+					<div>
+						<p class="companyName">
+							Проминтех
+						</p>
+						<p class="companyEssence">
+							Инжиниринговая компания 
+						</p>
+					</div>
+					<img class="logo" src="/static/images/Logo.png">
+				</div>
+				<div class="companySeparator"></div>
+				<p class="companyText">ООО "НПК" - динамично развивающаяся производственная компания, специализирующаяся на автоматизации технологических процессов "под ключ" и полупроводниковой преобразовательной технике, включая обследование объекта Заказчика, разработку, проектирование, комплектацию, изготовление, монтаж, пусконаладку и последующее обслуживание оборудования. </p>
+			</div>
+		</div>
+        <div class="section" data-anchor="servicePage" id="section1">
+			<table class="tableService">
 				<tr>
-					<th class="companyName">
-						<div >Проминтех</div>
-					</th>
-					<th></th>
+					<td class="tdCenter">
+						<div class="circleService"></div>
+						<p class="circleServiceInfo">Предпроектное обследование</p>
+					</td>
+					<td class="tdCenter">
+						<div class="circleService"></div>
+						<p class="circleServiceInfo">Предпроектное обследование</p>
+					</td>
+					<td>
+						<div class="circleService"></div>
+					</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td class="companyEssence">Инжинеринговая компания</td>
+					<td>
+						<div class="circleService"></div>
+					</td>
+					<td>
+						<div class="circleService"></div>
+					</td>
+					<td>
+						<div class="circleService"></div>
+					</td>
 				</tr>
 			</table>
-        </div>
-
-        <div class="section" data-anchor="certificats" id="section1">
+    	</div>
+        <div class="section" data-anchor="certificatesPage" id="section2">
             <div class="slide" id="slide1">
-                <div class="content">
-                    <h1>No need for jQuery</h1>
-                    <p>
-                        5 Kb gzipped!!
-                    </p>
-                    <p>
-                        Improve the loading time of your site!
-                    </p>
+                <div class="certificates">
+                    <table>
+						<tr>
+							<th>
+								<img class="certificatesImg" src="/static/images/certificates/Siemens.jpg" >
+							</th>
+							<th>
+                    			<p class="certificatesInfo">Инжиниринговый партнер Siemens</p>
+							</th>
+						</tr>
+                    </table>
                 </div>
             </div>
             <div class="slide" id="slide2">
-                <div class="content">
-                    <h1>Slides too!</h1>
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/AAB.jpg">
+                	<p class="certificatesInfo">Партнер ABB</p>
                 </div>
             </div>
-            <div class="slide" id="slide2">
-                <div class="content">
-                    <h1>More slides!</h1>
+            <div class="slide" id="slide3">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Cisco_Sertified.jpg">
+                    <p class="certificatesInfo">Cisco Sertified Partner</p>
+                </div>
+            </div>
+			<div class="slide" id="slide4">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Wonderware.jpg">
+                    <p class="certificatesInfo">Системный интегратор Wonderware</p>
+                </div>
+            </div>
+			<div class="slide" id="slide5">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Cisco_Registered.jpg">
+                    <p class="certificatesInfo">Cisco Registered Partner</p>
+                </div>
+            </div>
+			<div class="slide" id="slide6">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Cisco_Small_Midsized_Business_Specialized.jpg">
+                    <p class="certificatesInfo">Cisco Small Midsized Business Specialized Partner</p>
+                </div>
+            </div>
+			<div class="slide" id="slide7">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Rittal.jpg">
+                    <p class="certificatesInfo">Партнер Rittal</p>
+                </div>
+            </div>
+			<div class="slide" id="slide8">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Schneider_Electric .jpg">
+                    <p class="certificatesInfo">Дилер Schneider Electric</p>
+                </div>
+            </div>
+			<div class="slide" id="slide9">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_of_compliance_with_the_requirements_of_the_Customs_Union_for_rectifiers.jpg">
+                    <p class="certificatesInfo">Сертификат соответствия требованиям Таможенного Союза на выпрямители</p>
+                </div>
+            </div>
+			<div class="slide" id="slide10">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_of_compliance_with_the_requirements_of_the_Customs_Union_NKU_up_to_1000_V.jpg">
+                    <p class="certificatesInfo">Сертификат соответствия требованиям Таможенного Союза НКУ до 1000 В</p>
+                </div>
+            </div>
+			<div class="slide" id="slide11">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_of_safety.jpg">
+                    <p class="certificatesInfo">Сертификат промышленной безопасности</p>
+                </div>
+            </div>
+			<div class="slide" id="slide12">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Fire_Safety_Certificate.jpg">
+                    <p class="certificatesInfo">Сертификат пожарной безопасности</p>
+                </div>
+            </div>
+			<div class="slide" id="slide13">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_ISO.jpg">
+                    <p class="certificatesInfo">Сертификат ISO</p>
+                </div>
+            </div>
+			<div class="slide" id="slide14">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_CRO1.jpg">
+                    <p class="certificatesInfo">Свидетельство СРО</p>
+                </div>
+            </div>
+			<div class="slide" id="slide15">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_CRO2.jpg">
+                    <p class="certificatesInfo">Свидетельство СРО</p>
+                </div>
+            </div>
+			<div class="slide" id="slide16">
+                <div class="certificates">
+                    <img class="certificatesImg" src="/static/images/certificates/Certificate_CRO3.jpg">
+                    <p class="certificatesInfo">Свидетельство СРО</p>
                 </div>
             </div>
         </div>
-        <div class="section" data-anchor="contacts" id="section2">
+        <div class="section" data-anchor="contactsPage" id="section3">
             <div class="content">
 				<table>
 					<tr>
 						<th>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" width="600" height="450" frameborder="0" style="border:0"></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" frameborder="0" style="border:0"></iframe>
 						</th>
 						<th>
-							<h1>Контакты</h1>
+							<!--<h1>Контакты</h1>
 							<p>
 								620017, Екатеринбург, ул. Белореченская,15 
 							</p>
@@ -269,14 +453,26 @@
 							</p>
 							<p>
 								E-mail: sales@np-k.ru
-							</p>
+							</p>-->
+								<p class="mapPlaceInfo">
+								Наш офис 
+								находится в городе Екатеринбург 
+								на улице Белореченская 
+								дом 15 
+								</p>
 						</th>
 					</tr>
 				</table>
+				<!--<iframe class="mapPlace" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" frameborder="0" style="border:0"></iframe>
+					<p class="mapPlaceInfo">
+					Наш офис
+					находится в городе Екатеринбург 
+					на улице Белореченская 
+					дом 15 
+					</p>-->
             </div>
         </div>
     </div>
-
 
 
     <!-- jQuery -->
@@ -286,14 +482,76 @@
     <script src="/static/js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
+
     <script src="/static/js/jquery.easing.min.js"></script>
 
     <script type="text/javascript" src="/static/js/javascript.fullPage.js"></script>
     <script type="text/javascript">
-        fullpage.initialize('#fullpage', {
-            anchors: ['about', 'certificats','contacts'],
-            menu: '#menu',
-            css3:true
+
+		    fullpage.initialize('#fullpage', {
+           //Navigation
+			menu: '#menu',
+			lockAnchors: false,
+            anchors: ['mainPage', 'servicePage', 'certificatesPage','contactsPage'],
+			navigation: false,
+			navigationPosition: 'right',
+			navigationTooltips: ['slide1', 'slide2', 'slide3', 'slide4'],
+			showActiveTooltip: false,
+			slidesNavigation: false,
+			slidesNavPosition: 'bottom',
+
+			//Scrolling
+			css3: true,
+			scrollingSpeed: 700,
+			autoScrolling: true,
+			fitToSection: true,
+			fitToSectionDelay: 1000,
+			scrollBar: false,
+			easing: 'easeInOutCubic',
+			easingcss3: 'ease',
+			loopBottom: false,
+			loopTop: false,
+			loopHorizontal: true,
+			continuousVertical: false,
+			continuousHorizontal: false,
+			scrollHorizontally: false,
+			interlockedSlides: false,
+			dragAndMove: false,
+			offsetSections: false,
+			resetSliders: false,
+			fadingEffect: false,
+			normalScrollElements: '#element1, .element2',
+			scrollOverflow: false,
+			scrollOverflowReset: false,
+			scrollOverflowOptions: null,
+			touchSensitivity: 15,
+			normalScrollElementTouchThreshold: 5,
+			bigSectionsDestination: null,
+
+			//Accessibility
+			keyboardScrolling: true,
+			animateAnchor: true,
+			recordHistory: true,
+
+			//Design
+			controlArrows: true,
+			verticalCentered: true,
+			sectionsColor : ['#ccc', '#fff'],
+			paddingTop: '3em',
+			paddingBottom: '10px',
+			fixedElements: '#header, .footer',
+			responsiveWidth: 0,
+			responsiveHeight: 0,
+			responsiveSlides: false,
+			parallax: false,
+			parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+			//Custom selectors
+			sectionSelector: '.section',
+			slideSelector: '.slide',
+
+			lazyLoading: true
+			
         });
 
     </script>
