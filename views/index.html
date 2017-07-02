@@ -97,38 +97,61 @@
 			transform: translateY(-50%);
 			text-align: center;
 		}
+
+		/* Map Page
+		 * --------------------------------------- */
 		.mapPlace{
 			float: left;
 		}
 		.mapPlaceInfo{
-			float: none;
+			/*min-height: 100%;*/
+			color: #4d4d4d
+		}
+		.mapTH{
+			width: 50%;
+			height: 100%;
+		}
+		.mapInfoTH{
+			padding-left: 20px;
 			text-align: left;
 		}
-
-		.certificates{
-			position: relative;
+		.maps{
 			height: 100%;
-			text-align: center;
 		}
+		.maps iframe{
+    		pointer-events: none;
+			width: 100%;
+			height: 100%;
+		}
+
+
+		/* Certificates Page
+		 * --------------------------------------- */
+		.certificatesImgTH{
+			width: 50%;
+		}
+		.certificatesInfoTH{
+		}
+
 		.certificatesImg{
-			position: absolute; 
-			left: 0; 
-			top: 50%; 
-			transform: translateY(-50%);
+			position: relative; 
+			/*top: 50%; 
+			transform: translateY(-50%);*/
 			max-width: 50%;
-			max-height: 70%;
-			/*float: left; width: 50%;*/
+			max-height: 100%;
+			left: 50%;
+    		transform: translateX(-50%);
 		}
 		.certificatesInfo{
 			color: #3a3a3a;
-			position: absolute; 
-			right: 0;
-			width: 50%; 
-			top: 50%; 
-			transform: translateY(-50%);
-			/*top: 50%;width: 50%; top: 50%;*/
+			position: relative; 
+			width: 80%; 
+			/*top: 50%; 
+			transform: translateY(-50%);*/
 		}
 
+		/* Company Page
+		 * --------------------------------------- */
 		.company{
 			position: relative;
 		    display: table;
@@ -165,6 +188,8 @@
 			margin: auto;
 		}
 
+		/* Navigation Menu
+		 * --------------------------------------- */
 		.menuBorder {
 			border-color: rgba(0, 113, 188, 0.7);
 			border-width: 0 0 2px;
@@ -179,6 +204,7 @@
 
 		.logo {
 			width: 75px;
+			position: relative;
 			top: -21%;
 			right: -12%;
 			position: absolute;
@@ -198,18 +224,23 @@
 		}
 
 		.circleService {
-			float: left;
 			border-radius: 50%;
+			border: 2px;
+			border-style: dashed;
+			border-color: rgba(0, 113, 188, 0.6);
 			width: 100px;
 			height: 100px;
-			background: rgba(0, 113, 188, 0.7);
+			background: rgba(0, 113, 188, 0.0);
 		}
 
 		.circleServiceInfo {
 			color: #4d4d4d;
+			padding-left: 20px;
 		}
 
 		.tableService {
+			margin-left: 20px;
+			margin-right: 20px;
 			width: 100%;
 			height: 70%;
 			top: 50%;
@@ -218,8 +249,8 @@
 		}
 
 		.tdCenter {
-			display:flex; 
 			align-items:center;
+			width: 33%;
 		}
 
 		/* Section 2
@@ -288,189 +319,324 @@
         <div class="section" data-anchor="mainPage" id="section0">
 			<div class="containerAbout">
 				<div class="company">
-					<div>
-						<p class="companyName">
-							Проминтех
-						</p>
-						<p class="companyEssence">
-							Инжиниринговая компания 
-						</p>
-					</div>
-					<img class="logo" src="/static/images/Logo.png">
+					<table>
+						<tr>
+							<td>
+								<div>
+									<p class="companyName">
+										Проминтех
+									</p>
+									<p class="companyEssence">
+										Инжиниринговая компания 
+									</p>
+								</div>
+							</td>
+							<td>
+								<img class="logo" src="/static/images/Logo.png">
+							</td>
+						</tr>
+					</table>
 				</div>
 				<div class="companySeparator"></div>
-				<p class="companyText">ООО "НПК" - динамично развивающаяся производственная компания, специализирующаяся на автоматизации технологических процессов "под ключ" и полупроводниковой преобразовательной технике, включая обследование объекта Заказчика, разработку, проектирование, комплектацию, изготовление, монтаж, пусконаладку и последующее обслуживание оборудования. </p>
+				<p class="companyText">ООО "НПК" - динамично развивающаяся производственная компания, специализирующаяся на автоматизации технологических процессов "под ключ" и полупроводниковой преобразовательной технике, включая обследование объекта Заказчика, разработку, проектирование, комплектацию, изготовление, монтаж, пусконаладку и последующее обслуживание оборудования</p>
 			</div>
 		</div>
         <div class="section" data-anchor="servicePage" id="section1">
 			<table class="tableService">
 				<tr>
 					<td class="tdCenter">
-						<div class="circleService"></div>
-						<p class="circleServiceInfo">Предпроектное обследование</p>
+						<table>
+							<tr>
+								<td>
+									<div class="circleService"></div>
+								</td>
+								<td>
+									<p class="circleServiceInfo">Предпроектное обследование</p>
+								</td>
+							</tr>
+						</table>
 					</td>
 					<td class="tdCenter">
-						<div class="circleService"></div>
-						<p class="circleServiceInfo">Предпроектное обследование</p>
+						<table>
+							<tr>
+								<td>
+									<div class="circleService"></div>
+								</td>
+								<td>
+									<p class="circleServiceInfo">Составление ТЗ</p>
+								</td>
+							</tr>
+						</table>
 					</td>
-					<td>
-						<div class="circleService"></div>
+					<td class="tdCenter">
+						<table>
+							<tr>
+								<td>
+									<div class="circleService"></div>
+								</td>
+								<td>
+									<p class="circleServiceInfo">Разработка документации</p>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<div class="circleService"></div>
+					<td class="tdCenter">
+						<table>
+							<tr>
+								<td>
+									<div class="circleService"></div>
+								</td>
+								<td>
+									<p class="circleServiceInfo">Разработка ПО</p>
+								</td>
+							</tr>
+						</table>
 					</td>
-					<td>
-						<div class="circleService"></div>
+					<td class="tdCenter">
+						<table>
+							<tr>
+								<td>
+									<div class="circleService"></div>
+								</td>
+								<td>
+									<p class="circleServiceInfo">Обучение персонала</p>
+								</td>
+							</tr>
+						</table>
 					</td>
-					<td>
-						<div class="circleService"></div>
+					<td class="tdCenter">
+						<table>
+							<tr>
+								<td>
+									<div class="circleService"></div>
+								</td>
+								<td>
+									<p class="circleServiceInfo">Гарантийное и сервисное обслуживание</p>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 			</table>
     	</div>
         <div class="section" data-anchor="certificatesPage" id="section2">
             <div class="slide" id="slide1">
-                <div class="certificates">
-                    <table>
-						<tr>
-							<th>
-								<img class="certificatesImg" src="/static/images/certificates/Siemens.jpg" >
-							</th>
-							<th>
-                    			<p class="certificatesInfo">Инжиниринговый партнер Siemens</p>
-							</th>
-						</tr>
-                    </table>
-                </div>
+                <table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+							<img class="certificatesImg" src="/static/images/certificates/Siemens.jpg" >
+						</th>
+						<th class="certificatesInfoTH">
+                   			<p class="certificatesInfo">Инжиниринговый партнер Siemens</p>
+						</th>
+					</tr>
+                </table>
             </div>
             <div class="slide" id="slide2">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/AAB.jpg">
-                	<p class="certificatesInfo">Партнер ABB</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/AAB.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                			<p class="certificatesInfo">Партнер ABB</p>
+						</th>
+					</tr>
+                </table>
             </div>
             <div class="slide" id="slide3">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Cisco_Sertified.jpg">
-                    <p class="certificatesInfo">Cisco Sertified Partner</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Cisco_Sertified.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Cisco Sertified Partner</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide4">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Wonderware.jpg">
-                    <p class="certificatesInfo">Системный интегратор Wonderware</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Wonderware.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Системный интегратор Wonderware</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide5">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Cisco_Registered.jpg">
-                    <p class="certificatesInfo">Cisco Registered Partner</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Cisco_Registered.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Cisco Registered Partner</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide6">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Cisco_Small_Midsized_Business_Specialized.jpg">
-                    <p class="certificatesInfo">Cisco Small Midsized Business Specialized Partner</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Cisco_Small_Midsized_Business_Specialized.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Cisco Small Midsized Business Specialized Partner</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide7">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Rittal.jpg">
-                    <p class="certificatesInfo">Партнер Rittal</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Rittal.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Партнер Rittal</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide8">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Schneider_Electric .jpg">
-                    <p class="certificatesInfo">Дилер Schneider Electric</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Schneider_Electric .jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Дилер Schneider Electric</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide9">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_of_compliance_with_the_requirements_of_the_Customs_Union_for_rectifiers.jpg">
-                    <p class="certificatesInfo">Сертификат соответствия требованиям Таможенного Союза на выпрямители</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_of_compliance_with_the_requirements_of_the_Customs_Union_for_rectifiers.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Сертификат соответствия требованиям Таможенного Союза на выпрямители</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide10">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_of_compliance_with_the_requirements_of_the_Customs_Union_NKU_up_to_1000_V.jpg">
-                    <p class="certificatesInfo">Сертификат соответствия требованиям Таможенного Союза НКУ до 1000 В</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_of_compliance_with_the_requirements_of_the_Customs_Union_NKU_up_to_1000_V.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Сертификат соответствия требованиям Таможенного Союза НКУ до 1000 В</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide11">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_of_safety.jpg">
-                    <p class="certificatesInfo">Сертификат промышленной безопасности</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_of_safety.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                   		 	<p class="certificatesInfo">Сертификат промышленной безопасности</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide12">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Fire_Safety_Certificate.jpg">
-                    <p class="certificatesInfo">Сертификат пожарной безопасности</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Fire_Safety_Certificate.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Сертификат пожарной безопасности</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide13">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_ISO.jpg">
-                    <p class="certificatesInfo">Сертификат ISO</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_ISO.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Сертификат ISO</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide14">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_CRO1.jpg">
-                    <p class="certificatesInfo">Свидетельство СРО</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_CRO1.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Свидетельство СРО</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide15">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_CRO2.jpg">
-                    <p class="certificatesInfo">Свидетельство СРО</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_CRO2.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Свидетельство СРО</p>
+						</th>
+					</tr>
+                </table>
             </div>
 			<div class="slide" id="slide16">
-                <div class="certificates">
-                    <img class="certificatesImg" src="/static/images/certificates/Certificate_CRO3.jpg">
-                    <p class="certificatesInfo">Свидетельство СРО</p>
-                </div>
+				<table class="tableService">
+					<tr>
+						<th class="certificatesImgTH">
+                    		<img class="certificatesImg" src="/static/images/certificates/Certificate_CRO3.jpg">
+						</th>
+						<th class="certificatesInfoTH">
+                    		<p class="certificatesInfo">Свидетельство СРО</p>
+						</th>
+					</tr>
+                </table>
             </div>
         </div>
         <div class="section" data-anchor="contactsPage" id="section3">
-            <div class="content">
-				<table>
+				<table class="tableService">
 					<tr>
-						<th>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" frameborder="0" style="border:0"></iframe>
+						<th class="mapTH">
+							<div class="embed-container maps">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" frameborder="0"></iframe>
+							</div>
 						</th>
-						<th>
-							<!--<h1>Контакты</h1>
-							<p>
-								620017, Екатеринбург, ул. Белореченская,15 
+						<th class="mapInfoTH">
+							<p class="mapPlaceInfo">
+								Обратитесь к нашим специалистам и получите профессиональную консультацию.<br>
+								Отдел АСУ-ТП: <br>
+								Телефон: (343) 377-000-1 <br>
+								Отдел преобразовательной техники: <br>
+								Телефон: (343) 310-260-2 <br>
+								Электронная почта: sales@np-k.ru <br>
+								Адрес: 620102 Екатеринбург, Белореченская 15 (БЦ Профит)
 							</p>
-							<p>
-								Телефон: (343) 377-000-1
-							</p>
-							<p>
-								E-mail: sales@np-k.ru
-							</p>-->
-								<p class="mapPlaceInfo">
-								Наш офис 
-								находится в городе Екатеринбург 
-								на улице Белореченская 
-								дом 15 
-								</p>
+							
 						</th>
 					</tr>
 				</table>
-				<!--<iframe class="mapPlace" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.6172086536353!2d60.56403041542975!3d56.81819958085169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16f1cc5a45e09%3A0xcc9b6caaa7e9e4fe!2z0JHQtdC70L7RgNC10YfQtdC90YHQutCw0Y8g0YPQuy4sIDE1LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDEwMg!5e0!3m2!1sru!2sua!4v1498667204240" frameborder="0" style="border:0"></iframe>
-					<p class="mapPlaceInfo">
-					Наш офис
-					находится в городе Екатеринбург 
-					на улице Белореченская 
-					дом 15 
-					</p>-->
-            </div>
         </div>
     </div>
 
@@ -487,9 +653,19 @@
 
     <script type="text/javascript" src="/static/js/javascript.fullPage.js"></script>
     <script type="text/javascript">
+			//Remove autofocus from maps
+			$('.maps').click(function () 
+			{
+				$('.maps iframe').css("pointer-events", "auto");
+			});
 
+			$( ".maps" ).mouseleave(function() 
+			{
+				$('.maps iframe').css("pointer-events", "none"); 
+			});
+			//Init FullPage
 		    fullpage.initialize('#fullpage', {
-           //Navigation
+           	//Navigation
 			menu: '#menu',
 			lockAnchors: false,
             anchors: ['mainPage', 'servicePage', 'certificatesPage','contactsPage'],
